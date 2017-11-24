@@ -30,7 +30,7 @@
   
         <?php  
         $USER = $_SESSION["USERNAME"];
-        echo $USER;
+     
         
         include("\Models\database.php");  
         $view_users_query="select * from users WHERE username='$USER'";//select query for viewing users.  
