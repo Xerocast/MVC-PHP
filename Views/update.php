@@ -89,8 +89,8 @@ if(isset($_POST['update']))
     $salted = "hasher512encryption" + $user_pass + "saltadded"; //here basic salt is used (nothing too complex for this application).
                                                                 //a unique salt would be used in real world applications and stored with the password in the database
     $hashedpass = hash('sha512', $salted);                      //Now the salted password is hashed with sha512.              //for future reference this encryption is not very secure. Crypt and other algorithms will need to be used
-    //$updateUser="UPDATE users SET username='$user_name', password='$hashedpass' WHERE username = '$A'";  //Here the user will be updated in the database
-    $updateUser="UPDATE users SET username='$user_name', password='$hashedpass' WHERE username = 'a'"; //static update to test if update works
+    $updateUser="UPDATE users SET username='$user_name', password='$hashedpass' WHERE username = '$A'";  //Here the user will be updated in the database
+    //$updateUser="UPDATE users SET username='$user_name', password='$hashedpass' WHERE username = 'a'"; //static update to test if update works
     
     try 
     {
